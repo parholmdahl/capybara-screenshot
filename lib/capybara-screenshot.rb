@@ -157,7 +157,7 @@ Capybara::Screenshot.class_eval do
   end
 
   selenium_block = proc do |driver, path|
-    driver.browser.save_screenshot(path)
+    driver.browser.save_screenshot(path, full_page: true)
   end
 
   register_driver :selenium, &selenium_block
